@@ -19,6 +19,16 @@
                 </configuration>
             </plugin>
         </plugins>
+
+        <!-- 设置properties配置文件读取路径 -->
+        <resources>
+            <resource>
+                <directory>properties</directory>
+                <includes>
+                    <include>*.properties</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
     <packaging>jar</packaging>
 
@@ -29,6 +39,21 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>5.1.7.RELEASE</version>
+        </dependency>
+
+        <!-- 添加log4j日志依赖 -->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
+            <!-- <scope>test</scope> -->
         </dependency>
 
     </dependencies>
