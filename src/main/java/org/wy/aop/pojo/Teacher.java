@@ -1,5 +1,8 @@
 package org.wy.aop.pojo;
 
+import org.springframework.stereotype.Component;
+
+@Component(value = "Teacher") // 将Teacher存入Spring IOC容器
 public class Teacher implements Person {
     @Override
     public void work() {

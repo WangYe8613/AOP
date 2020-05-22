@@ -20,12 +20,20 @@
             </plugin>
         </plugins>
 
-        <!-- 设置properties配置文件读取路径 -->
+
         <resources>
+            <!-- 设置properties配置文件读取路径 -->
             <resource>
                 <directory>properties</directory>
                 <includes>
                     <include>*.properties</include>
+                </includes>
+            </resource>
+            <!-- 设置xml配置文件读取路径 -->
+            <resource>
+                <directory>conf</directory>
+                <includes>
+                    <include>*.xml</include>
                 </includes>
             </resource>
         </resources>
@@ -54,6 +62,13 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.25</version>
             <!-- <scope>test</scope> -->
+        </dependency>
+
+        <!--配置解析切入点表达式的jar包-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.7</version>
         </dependency>
 
     </dependencies>
